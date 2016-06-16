@@ -37,6 +37,12 @@ module.exports.routes = {
   },
   '/vista':{
     view: 'vista'
+  },
+  '/user/hola':{
+    controller: 'UserController', action:'patito'
+  },
+  '/user/singin':{
+    controller:'UserController', action: 'insert'
   }
 
   /***************************************************************************

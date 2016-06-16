@@ -7,5 +7,37 @@
 
 module.exports = {
 
+	patito:function(req, res){
+		console.log('Entre al formulario');
+		res.view('user/pagina1');
+		/*res.json({
+			Name: 'Kevin',
+			Age: 20,
+			LastName: 'Herrera'
+		});*/
+	},
+
+	insert:function(req, res){
+		console.log('Inserté');
+
+		var userObj = {
+			name: req.param('name'),
+			lastname: req.param('lastname'),
+			username: req.param('username'),
+			email: req.param('email')
+		}
+
+		console.log(userObj);
+		User.create(userObj, function(err, user){
+		if (err){
+			console.log(err);
+			return res.redirect('user/patito');
+		}
+
+		res.redirect('user'/*list'*/);
+		});
+
+	}
+
 };
 
