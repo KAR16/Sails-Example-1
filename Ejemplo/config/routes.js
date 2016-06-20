@@ -43,6 +43,12 @@ module.exports.routes = {
   },
   '/user/singin':{
     controller:'UserController', action: 'insert'
+  },
+  /*'/user/list':{
+    view: 'user/user_list'
+  },*/
+  '/user/list':{
+    controller:'UserController', action: 'viewList'
   }
 
   /***************************************************************************
