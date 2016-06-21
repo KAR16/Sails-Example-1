@@ -49,6 +49,9 @@ module.exports.routes = {
   },*/
   '/user/list':{
     controller:'UserController', action: 'viewList'
+  },
+  '/user/table_user':{
+    view: 'user/table'
   }
 
   /***************************************************************************
