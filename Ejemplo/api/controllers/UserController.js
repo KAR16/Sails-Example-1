@@ -71,7 +71,7 @@ module.exports = {
 			console.log(user);
 			res.view({user});		
 		});
-	}/*, 
+	}, 
  	edit:function(req, res, next){
 		User.findOne(req.param('id'), function userFounded(err, user){
 			if (err){
@@ -104,11 +104,22 @@ module.exports = {
 			req.session.flash={
 				err:err
 			}
-			return res.redirect('user//' + req.param('id'));
+			return res.redirect('user/' + req.param('id'));
 		}
 
 		res.redirect('user/table_user');
 		});
-	}*/
+	},
+
+	delete:function(req, res, next){
+		User.destroy(req.param('id'), function userDestroyed(err, user){
+			console.log('Delete');
+			if (err){
+				console.log(err);
+				return next(err);
+			}
+			res.redirect('user/table_user');
+		});
+	}
 };
 

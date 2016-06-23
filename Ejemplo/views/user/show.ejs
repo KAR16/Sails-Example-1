@@ -7,7 +7,18 @@
 		<li><%= user.email %></li>
 	</ul>
 
-	<form action="/user/edit/<%= user.id %>" method="POST" accept-charset="utf-8">
-		<button class="btn btn-primary" type="submit">Next</button>
-	</form>
+	<br>
+	<table>
+		<tr>
+			<td>
+				<form action="/user/edit/<%= user.id %>" method="POST" accept-charset="utf-8">
+					<button class="btn btn-primary" type="submit">Edit</button>
+				</form>
+			</td>
+			<td>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="/user/table_user"> <button class="btn btn-warning" type="submit">Table User</button></a>
+			</td>
+		</tr>
+	</table>
 </div>

@@ -10,10 +10,12 @@ $(document).ready(function() {
 								"<td class =\"email\"> "+ parse_user[i].email +"</td>"+
 
 								"<td class=\"edit\">"+
-								"<a href=\"/user/show/"+ parse_user[i].id +"\"><input class=\"btn btn-primary\" type=\"button\" value=\"Edit\"></a>"+
+									"<a href=\"/user/show/"+ parse_user[i].id +"\"><input class=\"btn btn-primary\" type=\"button\" value=\"See Details\"></a>"+
 								"</td>"+
-								"<td class=\"edit\"><input class=\"btn btn-danger\" type=\"button\" value=\"Delete\"></td>"+
-								"</tr>");
+								"<td class=\"delete\">"+
+									"<a href=\"/user/delete/"+ parse_user[i].id +"\"><input class=\"btn btn-danger\" type=\"button\" value=\"Delete\"></a>"+
+								"</td>"+
+							"</tr>");
 	};
 
 
