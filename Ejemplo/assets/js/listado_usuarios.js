@@ -7,7 +7,13 @@ $(document).ready(function() {
 								"<td class =\"name\"> "+ parse_user[i].name +"</td>"+
 								"<td class =\"lastname\">" +parse_user[i].lastname +"</td>"+
 								"<td class =\"username\"> "+ parse_user[i].username +"</td>"+
-								"<td class =\"email\"> "+ parse_user[i].email +"</td></tr>");
+								"<td class =\"email\"> "+ parse_user[i].email +"</td>"+
+
+								"<td class=\"edit\">"+
+								"<a href=\"/user/show/"+ parse_user[i].id +"\"><input class=\"btn btn-primary\" type=\"button\" value=\"Edit\"></a>"+
+								"</td>"+
+								"<td class=\"edit\"><input class=\"btn btn-danger\" type=\"button\" value=\"Delete\"></td>"+
+								"</tr>");
 	};
 
 

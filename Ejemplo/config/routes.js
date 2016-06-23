@@ -52,7 +52,10 @@ module.exports.routes = {
   },
   '/user/table_user':{
     view: 'user/table'
-  }
+  },
+  /*'/user/show':{
+    view: 'user/show'
+  }*/
 
   /***************************************************************************
   *                                                                          *
